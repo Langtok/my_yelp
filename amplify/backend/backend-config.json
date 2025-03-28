@@ -7,7 +7,7 @@
             "UserPoolId"
           ],
           "category": "auth",
-          "resourceName": "myyelp9224de16"
+          "resourceName": "myyelpc54eb8d1"
         }
       ],
       "output": {
@@ -16,7 +16,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authmyyelp9224de16"
+              "userPoolId": "authmyyelpc54eb8d1"
             }
           }
         }
@@ -26,7 +26,7 @@
     }
   },
   "auth": {
-    "myyelp9224de16": {
+    "myyelpc54eb8d1": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -53,11 +53,29 @@
       "service": "Cognito"
     }
   },
-  "storage": {
-    "s3e9670925": {
-      "dependsOn": [],
+  "hosting": {
+    "amplifyhosting": {
       "providerPlugin": "awscloudformation",
-      "service": "S3"
+      "service": "amplifyhosting",
+      "type": "manual"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_hosting_amplifyhosting_appId": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
+    },
+    "AMPLIFY_hosting_amplifyhosting_type": {
+      "usedBy": [
+        {
+          "category": "hosting",
+          "resourceName": "amplifyhosting"
+        }
+      ]
     }
   }
 }

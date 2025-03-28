@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "myyelp",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authmyyelpbbf5d6a4",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

@@ -1,54 +1,45 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createBathrooms = /* GraphQL */ `
-  mutation CreateBathrooms(
-    $input: CreateBathroomsInput!
-    $condition: ModelBathroomsConditionInput
+export const createTodo = /* GraphQL */ `
+  mutation CreateTodo(
+    $input: CreateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    createBathrooms(input: $input, condition: $condition) {
+    createTodo(input: $input, condition: $condition) {
       id
       name
-      rating
-      address
       description
-      image_url
       createdAt
       updatedAt
       __typename
     }
   }
 `;
-export const updateBathrooms = /* GraphQL */ `
-  mutation UpdateBathrooms(
-    $input: UpdateBathroomsInput!
-    $condition: ModelBathroomsConditionInput
+export const updateTodo = /* GraphQL */ `
+  mutation UpdateTodo(
+    $input: UpdateTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    updateBathrooms(input: $input, condition: $condition) {
+    updateTodo(input: $input, condition: $condition) {
       id
       name
-      rating
-      address
       description
-      image_url
       createdAt
       updatedAt
       __typename
     }
   }
 `;
-export const deleteBathrooms = /* GraphQL */ `
-  mutation DeleteBathrooms(
-    $input: DeleteBathroomsInput!
-    $condition: ModelBathroomsConditionInput
+export const deleteTodo = /* GraphQL */ `
+  mutation DeleteTodo(
+    $input: DeleteTodoInput!
+    $condition: ModelTodoConditionInput
   ) {
-    deleteBathrooms(input: $input, condition: $condition) {
+    deleteTodo(input: $input, condition: $condition) {
       id
       name
-      rating
-      address
       description
-      image_url
       createdAt
       updatedAt
       __typename

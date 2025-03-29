@@ -8,45 +8,51 @@ type GeneratedSubscription<InputType, OutputType> = string & {
   __generatedSubscriptionOutput: OutputType;
 };
 
-export const onCreateTodo = /* GraphQL */ `subscription OnCreateTodo($filter: ModelSubscriptionTodoFilterInput) {
-  onCreateTodo(filter: $filter) {
+export const onCreateRestaurant = /* GraphQL */ `subscription OnCreateRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
+) {
+  onCreateRestaurant(filter: $filter) {
     id
     name
-    description
+    location
     createdAt
     updatedAt
     __typename
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnCreateTodoSubscriptionVariables,
-  APITypes.OnCreateTodoSubscription
+  APITypes.OnCreateRestaurantSubscriptionVariables,
+  APITypes.OnCreateRestaurantSubscription
 >;
-export const onUpdateTodo = /* GraphQL */ `subscription OnUpdateTodo($filter: ModelSubscriptionTodoFilterInput) {
-  onUpdateTodo(filter: $filter) {
+export const onUpdateRestaurant = /* GraphQL */ `subscription OnUpdateRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
+) {
+  onUpdateRestaurant(filter: $filter) {
     id
     name
-    description
+    location
     createdAt
     updatedAt
     __typename
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnUpdateTodoSubscriptionVariables,
-  APITypes.OnUpdateTodoSubscription
+  APITypes.OnUpdateRestaurantSubscriptionVariables,
+  APITypes.OnUpdateRestaurantSubscription
 >;
-export const onDeleteTodo = /* GraphQL */ `subscription OnDeleteTodo($filter: ModelSubscriptionTodoFilterInput) {
-  onDeleteTodo(filter: $filter) {
+export const onDeleteRestaurant = /* GraphQL */ `subscription OnDeleteRestaurant(
+  $filter: ModelSubscriptionRestaurantFilterInput
+) {
+  onDeleteRestaurant(filter: $filter) {
     id
     name
-    description
+    location
     createdAt
     updatedAt
     __typename
   }
 }
 ` as GeneratedSubscription<
-  APITypes.OnDeleteTodoSubscriptionVariables,
-  APITypes.OnDeleteTodoSubscription
+  APITypes.OnDeleteRestaurantSubscriptionVariables,
+  APITypes.OnDeleteRestaurantSubscription
 >;

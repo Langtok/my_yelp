@@ -8,54 +8,54 @@ type GeneratedMutation<InputType, OutputType> = string & {
   __generatedMutationOutput: OutputType;
 };
 
-export const createTodo = /* GraphQL */ `mutation CreateTodo(
-  $input: CreateTodoInput!
-  $condition: ModelTodoConditionInput
+export const createRestaurant = /* GraphQL */ `mutation CreateRestaurant(
+  $input: CreateRestaurantInput!
+  $condition: ModelRestaurantConditionInput
 ) {
-  createTodo(input: $input, condition: $condition) {
+  createRestaurant(input: $input, condition: $condition) {
     id
     name
-    description
+    location
     createdAt
     updatedAt
     __typename
   }
 }
 ` as GeneratedMutation<
-  APITypes.CreateTodoMutationVariables,
-  APITypes.CreateTodoMutation
+  APITypes.CreateRestaurantMutationVariables,
+  APITypes.CreateRestaurantMutation
 >;
-export const updateTodo = /* GraphQL */ `mutation UpdateTodo(
-  $input: UpdateTodoInput!
-  $condition: ModelTodoConditionInput
+export const updateRestaurant = /* GraphQL */ `mutation UpdateRestaurant(
+  $input: UpdateRestaurantInput!
+  $condition: ModelRestaurantConditionInput
 ) {
-  updateTodo(input: $input, condition: $condition) {
+  updateRestaurant(input: $input, condition: $condition) {
     id
     name
-    description
+    location
     createdAt
     updatedAt
     __typename
   }
 }
 ` as GeneratedMutation<
-  APITypes.UpdateTodoMutationVariables,
-  APITypes.UpdateTodoMutation
+  APITypes.UpdateRestaurantMutationVariables,
+  APITypes.UpdateRestaurantMutation
 >;
-export const deleteTodo = /* GraphQL */ `mutation DeleteTodo(
-  $input: DeleteTodoInput!
-  $condition: ModelTodoConditionInput
+export const deleteRestaurant = /* GraphQL */ `mutation DeleteRestaurant(
+  $input: DeleteRestaurantInput!
+  $condition: ModelRestaurantConditionInput
 ) {
-  deleteTodo(input: $input, condition: $condition) {
+  deleteRestaurant(input: $input, condition: $condition) {
     id
     name
-    description
+    location
     createdAt
     updatedAt
     __typename
   }
 }
 ` as GeneratedMutation<
-  APITypes.DeleteTodoMutationVariables,
-  APITypes.DeleteTodoMutation
+  APITypes.DeleteRestaurantMutationVariables,
+  APITypes.DeleteRestaurantMutation
 >;

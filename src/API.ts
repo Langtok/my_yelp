@@ -2,18 +2,18 @@
 /* eslint-disable */
 //  This file was automatically generated and should not be edited.
 
-export type CreateTodoInput = {
+export type CreateRestaurantInput = {
   id?: string | null,
   name: string,
-  description?: string | null,
+  location: string,
 };
 
-export type ModelTodoConditionInput = {
+export type ModelRestaurantConditionInput = {
   name?: ModelStringInput | null,
-  description?: ModelStringInput | null,
-  and?: Array< ModelTodoConditionInput | null > | null,
-  or?: Array< ModelTodoConditionInput | null > | null,
-  not?: ModelTodoConditionInput | null,
+  location?: ModelStringInput | null,
+  and?: Array< ModelRestaurantConditionInput | null > | null,
+  or?: Array< ModelRestaurantConditionInput | null > | null,
+  not?: ModelRestaurantConditionInput | null,
   createdAt?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
 };
@@ -58,34 +58,34 @@ export type ModelSizeInput = {
   between?: Array< number | null > | null,
 };
 
-export type Todo = {
-  __typename: "Todo",
+export type Restaurant = {
+  __typename: "Restaurant",
   id: string,
   name: string,
-  description?: string | null,
+  location: string,
   createdAt: string,
   updatedAt: string,
 };
 
-export type UpdateTodoInput = {
+export type UpdateRestaurantInput = {
   id: string,
   name?: string | null,
-  description?: string | null,
+  location?: string | null,
 };
 
-export type DeleteTodoInput = {
+export type DeleteRestaurantInput = {
   id: string,
 };
 
-export type ModelTodoFilterInput = {
+export type ModelRestaurantFilterInput = {
   id?: ModelIDInput | null,
   name?: ModelStringInput | null,
-  description?: ModelStringInput | null,
+  location?: ModelStringInput | null,
   createdAt?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
-  and?: Array< ModelTodoFilterInput | null > | null,
-  or?: Array< ModelTodoFilterInput | null > | null,
-  not?: ModelTodoFilterInput | null,
+  and?: Array< ModelRestaurantFilterInput | null > | null,
+  or?: Array< ModelRestaurantFilterInput | null > | null,
+  not?: ModelRestaurantFilterInput | null,
 };
 
 export type ModelIDInput = {
@@ -104,20 +104,20 @@ export type ModelIDInput = {
   size?: ModelSizeInput | null,
 };
 
-export type ModelTodoConnection = {
-  __typename: "ModelTodoConnection",
-  items:  Array<Todo | null >,
+export type ModelRestaurantConnection = {
+  __typename: "ModelRestaurantConnection",
+  items:  Array<Restaurant | null >,
   nextToken?: string | null,
 };
 
-export type ModelSubscriptionTodoFilterInput = {
+export type ModelSubscriptionRestaurantFilterInput = {
   id?: ModelSubscriptionIDInput | null,
   name?: ModelSubscriptionStringInput | null,
-  description?: ModelSubscriptionStringInput | null,
+  location?: ModelSubscriptionStringInput | null,
   createdAt?: ModelSubscriptionStringInput | null,
   updatedAt?: ModelSubscriptionStringInput | null,
-  and?: Array< ModelSubscriptionTodoFilterInput | null > | null,
-  or?: Array< ModelSubscriptionTodoFilterInput | null > | null,
+  and?: Array< ModelSubscriptionRestaurantFilterInput | null > | null,
+  or?: Array< ModelSubscriptionRestaurantFilterInput | null > | null,
 };
 
 export type ModelSubscriptionIDInput = {
@@ -150,83 +150,83 @@ export type ModelSubscriptionStringInput = {
   notIn?: Array< string | null > | null,
 };
 
-export type CreateTodoMutationVariables = {
-  input: CreateTodoInput,
-  condition?: ModelTodoConditionInput | null,
+export type CreateRestaurantMutationVariables = {
+  input: CreateRestaurantInput,
+  condition?: ModelRestaurantConditionInput | null,
 };
 
-export type CreateTodoMutation = {
-  createTodo?:  {
-    __typename: "Todo",
+export type CreateRestaurantMutation = {
+  createRestaurant?:  {
+    __typename: "Restaurant",
     id: string,
     name: string,
-    description?: string | null,
+    location: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type UpdateTodoMutationVariables = {
-  input: UpdateTodoInput,
-  condition?: ModelTodoConditionInput | null,
+export type UpdateRestaurantMutationVariables = {
+  input: UpdateRestaurantInput,
+  condition?: ModelRestaurantConditionInput | null,
 };
 
-export type UpdateTodoMutation = {
-  updateTodo?:  {
-    __typename: "Todo",
+export type UpdateRestaurantMutation = {
+  updateRestaurant?:  {
+    __typename: "Restaurant",
     id: string,
     name: string,
-    description?: string | null,
+    location: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type DeleteTodoMutationVariables = {
-  input: DeleteTodoInput,
-  condition?: ModelTodoConditionInput | null,
+export type DeleteRestaurantMutationVariables = {
+  input: DeleteRestaurantInput,
+  condition?: ModelRestaurantConditionInput | null,
 };
 
-export type DeleteTodoMutation = {
-  deleteTodo?:  {
-    __typename: "Todo",
+export type DeleteRestaurantMutation = {
+  deleteRestaurant?:  {
+    __typename: "Restaurant",
     id: string,
     name: string,
-    description?: string | null,
+    location: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type GetTodoQueryVariables = {
+export type GetRestaurantQueryVariables = {
   id: string,
 };
 
-export type GetTodoQuery = {
-  getTodo?:  {
-    __typename: "Todo",
+export type GetRestaurantQuery = {
+  getRestaurant?:  {
+    __typename: "Restaurant",
     id: string,
     name: string,
-    description?: string | null,
+    location: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type ListTodosQueryVariables = {
-  filter?: ModelTodoFilterInput | null,
+export type ListRestaurantsQueryVariables = {
+  filter?: ModelRestaurantFilterInput | null,
   limit?: number | null,
   nextToken?: string | null,
 };
 
-export type ListTodosQuery = {
-  listTodos?:  {
-    __typename: "ModelTodoConnection",
+export type ListRestaurantsQuery = {
+  listRestaurants?:  {
+    __typename: "ModelRestaurantConnection",
     items:  Array< {
-      __typename: "Todo",
+      __typename: "Restaurant",
       id: string,
       name: string,
-      description?: string | null,
+      location: string,
       createdAt: string,
       updatedAt: string,
     } | null >,
@@ -234,46 +234,46 @@ export type ListTodosQuery = {
   } | null,
 };
 
-export type OnCreateTodoSubscriptionVariables = {
-  filter?: ModelSubscriptionTodoFilterInput | null,
+export type OnCreateRestaurantSubscriptionVariables = {
+  filter?: ModelSubscriptionRestaurantFilterInput | null,
 };
 
-export type OnCreateTodoSubscription = {
-  onCreateTodo?:  {
-    __typename: "Todo",
+export type OnCreateRestaurantSubscription = {
+  onCreateRestaurant?:  {
+    __typename: "Restaurant",
     id: string,
     name: string,
-    description?: string | null,
+    location: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnUpdateTodoSubscriptionVariables = {
-  filter?: ModelSubscriptionTodoFilterInput | null,
+export type OnUpdateRestaurantSubscriptionVariables = {
+  filter?: ModelSubscriptionRestaurantFilterInput | null,
 };
 
-export type OnUpdateTodoSubscription = {
-  onUpdateTodo?:  {
-    __typename: "Todo",
+export type OnUpdateRestaurantSubscription = {
+  onUpdateRestaurant?:  {
+    __typename: "Restaurant",
     id: string,
     name: string,
-    description?: string | null,
+    location: string,
     createdAt: string,
     updatedAt: string,
   } | null,
 };
 
-export type OnDeleteTodoSubscriptionVariables = {
-  filter?: ModelSubscriptionTodoFilterInput | null,
+export type OnDeleteRestaurantSubscriptionVariables = {
+  filter?: ModelSubscriptionRestaurantFilterInput | null,
 };
 
-export type OnDeleteTodoSubscription = {
-  onDeleteTodo?:  {
-    __typename: "Todo",
+export type OnDeleteRestaurantSubscription = {
+  onDeleteRestaurant?:  {
+    __typename: "Restaurant",
     id: string,
     name: string,
-    description?: string | null,
+    location: string,
     createdAt: string,
     updatedAt: string,
   } | null,

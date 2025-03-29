@@ -17,6 +17,9 @@
       },
       "api": {
         "myyelp": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
       }
     }
   }

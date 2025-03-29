@@ -9,129 +9,109 @@
   width: 100vw;
   min-height: 100vh;
   padding: 2rem 5%;
-  background-image: url(./components/Assets/images/bck-wallpaper.jpeg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
 }
 
 .top-bar {
+  width: 100%;
+  max-width: 1200px;
+  background: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  background-color: rgb(63, 44, 44);
-  color: white;
-  padding: 1.5rem 2rem;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
 
   .head {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: white;
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: 600;
   }
 
   img {
-    width: 100px;
-    height: 50px;
+    width: 90px;
+    height: 45px;
     object-fit: contain;
   }
 
   button {
-    background-color: red;
+    background: #e74c3c;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 6px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
 
     &:hover {
-      border: 1px solid red;
-      color: red;
-      background-color: white;
+      background: #c0392b;
+      transform: translateY(-1px);
     }
   }
 }
 
 button {
-  margin: 2rem 0;
-  background-color: green;
+  margin: 1.5rem 0;
+  background: #3498db;
   color: white;
-  padding: 10px 15px;
+  padding: 12px 25px;
   font-size: 1rem;
-  border-radius: 6px;
+  border-radius: 25px;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  box-shadow: 0 2px 10px rgba(52,152,219,0.3);
+  transition: all 0.3s ease;
 
   &:hover {
-    background-color: white;
-    color: rgb(0, 0, 0);
-    border: 1px solid green;
+    background: #2980b9;
+    transform: translateY(-2px);
   }
 }
 
-.add_restaurant button {
+.add_restaurant {
   width: 100%;
-  height: 40px;
-  background-color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 1rem;
-  color: rgb(9, 9, 77);
-  border: 1px solid rgb(9, 9, 77);
-  padding: 10px;
-  transition: 0.3s;
+  max-width: 500px;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
 
   .input-area {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    width: 100%;
+    gap: 20px;
 
     input {
       width: 100%;
-      height: 40px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      outline: none;
-      padding: 0px 10px;
+      height: 45px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      padding: 0 15px;
       font-size: 1rem;
-      font-weight: 500;
-      transition: 0.3s;
+      transition: all 0.3s ease;
 
       &:focus {
-        border-color: green;
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52,152,219,0.3);
+        outline: none;
       }
     }
   }
 
   button {
     width: 100%;
-    height: 40px;
-    background-color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    color: rgb(9, 9, 77);
-    border: 1px solid rgb(9, 9, 77);
-    padding: 10px;
-    transition: 0.3s;
-
+    margin: 20px 0 0 0;
+    background: #2ecc71;
+    
     &:hover {
-      background-color: rgb(9, 9, 77);
-      color: white;
-      border: 1px solid rgb(9, 9, 77);
-      font-weight: 600;
+      background: #27ae60;
     }
   }
 }
@@ -139,14 +119,43 @@ button {
 .main {
   width: 100%;
   max-width: 1200px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  background-color: rgb(63, 44, 44);
-  border-radius: 8px;
-  padding: 2rem;
-  gap: 20px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 1rem;
+}
+
+.restaurant-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  }
+
+  img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+    line-height: 1.4;
+  }
 }
 
 @media (max-width: 768px) {
@@ -157,45 +166,11 @@ button {
   .top-bar {
     flex-direction: column;
     gap: 1rem;
-    padding: 1rem;
     text-align: center;
+    padding: 1.5rem;
   }
 
   .add_restaurant {
     width: 100%;
-    padding: 1.5rem;
-  }
-
-  .main {
-    flex-direction: column;
-    gap: 1.5rem;
   }
 }
-
-.restaurant-card {
-  width: 30%;
-  margin: 10px;
-  background-color: white;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.restaurant-card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 5px;
-}
-
-.restaurant-card h3 {
-  font-size: 1.2rem;
-  color: rgb(9, 9, 77);
-}
-
-.restaurant-card p {
-  font-size: 1rem;
-  color: gray;
-}
-

@@ -1,4 +1,4 @@
-# Welcome to My_Yelp
+# Welcome to My Yelp
 ***
 
 ## Task

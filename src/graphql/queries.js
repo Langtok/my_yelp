@@ -1,34 +1,35 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getRestaurant = /* GraphQL */ `
-  query GetRestaurant($id: ID!) {
-    getRestaurant(id: $id) {
+export const getTodo = /* GraphQL */ `
+  query GetTodo($id: ID!) {
+    getTodo(id: $id) {
       id
       name
       description
-      state
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
-export const listRestaurants = /* GraphQL */ `
-  query ListRestaurants(
-    $filter: ModelRestaurantFilterInput
+export const listTodos = /* GraphQL */ `
+  query ListTodos(
+    $filter: ModelTodoFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listRestaurants(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listTodos(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
         description
-        state
         createdAt
         updatedAt
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;

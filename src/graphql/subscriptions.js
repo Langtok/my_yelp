@@ -1,45 +1,39 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateRestaurant = /* GraphQL */ `
-  subscription OnCreateRestaurant(
-    $filter: ModelSubscriptionRestaurantFilterInput
-  ) {
-    onCreateRestaurant(filter: $filter) {
+export const onCreateTodo = /* GraphQL */ `
+  subscription OnCreateTodo($filter: ModelSubscriptionTodoFilterInput) {
+    onCreateTodo(filter: $filter) {
       id
       name
       description
-      state
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
-export const onUpdateRestaurant = /* GraphQL */ `
-  subscription OnUpdateRestaurant(
-    $filter: ModelSubscriptionRestaurantFilterInput
-  ) {
-    onUpdateRestaurant(filter: $filter) {
+export const onUpdateTodo = /* GraphQL */ `
+  subscription OnUpdateTodo($filter: ModelSubscriptionTodoFilterInput) {
+    onUpdateTodo(filter: $filter) {
       id
       name
       description
-      state
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
-export const onDeleteRestaurant = /* GraphQL */ `
-  subscription OnDeleteRestaurant(
-    $filter: ModelSubscriptionRestaurantFilterInput
-  ) {
-    onDeleteRestaurant(filter: $filter) {
+export const onDeleteTodo = /* GraphQL */ `
+  subscription OnDeleteTodo($filter: ModelSubscriptionTodoFilterInput) {
+    onDeleteTodo(filter: $filter) {
       id
       name
       description
-      state
       createdAt
       updatedAt
+      __typename
     }
   }
 `;
